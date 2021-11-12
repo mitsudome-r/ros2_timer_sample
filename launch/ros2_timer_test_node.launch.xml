@@ -1,0 +1,9 @@
+<launch>
+  <arg name="use_sim_time" default="true" />
+  <node pkg="ros2_timer_test" exec="generic_timer_test_node" name="generic_timer_test_node" output="screen">
+    <param name="use_sim_time" value="$(var use_sim_time)"/>
+  </node>
+  <node pkg="ros2_timer_test" exec="create_timer_test_node" name="create_timer_test_node" output="screen">
+    <param name="use_sim_time" value="$(var use_sim_time)"/>
+  </node>
+</launch>
